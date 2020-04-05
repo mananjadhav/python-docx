@@ -299,6 +299,16 @@ class ST_Merge(XsdStringEnumeration):
     _members = (CONTINUE, RESTART)
 
 
+class ST_SheetState(XsdStringEnumeration):
+    """
+    Valid values for <x:sheet state=""> attribute
+    """
+    VISIBLE = 'visible'
+    HIDDEN = 'hidden'
+    VERYHIDDEN = 'veryHidden'
+
+    _members = (VISIBLE, HIDDEN, VERYHIDDEN)
+
 class ST_OnOff(XsdBoolean):
 
     @classmethod
@@ -344,6 +354,8 @@ class ST_SignedTwipsMeasure(XsdInt):
 class ST_String(XsdString):
     pass
 
+class ST_Xstring(XsdString):
+    pass
 
 class ST_TblLayoutType(XsdString):
 

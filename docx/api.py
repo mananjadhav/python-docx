@@ -28,6 +28,19 @@ def Document(docx=None):
         raise ValueError(tmpl % (docx, document_part.content_type))
     return document_part.document
 
+def Workbook(xlsx=None):
+    """
+    Return a |Workbook| object loaded from *xlsx*, where *xlsx* can be
+    either a path to a ``.xlsx`` file (a string) or a file-like object. If
+    *xlsx* is missing or ``None``, the built-in default document "template"
+    is loaded.
+    """
+    xlsx = _default_docx_path() if xlsx is None else xlsx
+    document_part = Package.open(xlsx).main_document_part
+    if document_part.content_type != CT.SML_SHEET_MAIN:
+        tmpl = "file '%s' is not an Excel file, content type is '%s'"
+        raise ValueError(tmpl % (docx, document_part.content_type))
+    return document_part
 
 def _default_docx_path():
     """

@@ -24,6 +24,7 @@ nsmap = {
     "wp": "http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing",
     "xml": "http://www.w3.org/XML/1998/namespace",
     "xsi": "http://www.w3.org/2001/XMLSchema-instance",
+    "x": "http://schemas.openxmlformats.org/spreadsheetml/2006/main",
 }
 
 pfxmap = dict((value, key) for key, value in nsmap.items())

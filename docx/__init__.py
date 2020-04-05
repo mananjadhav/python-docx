@@ -1,6 +1,7 @@
 # encoding: utf-8
 
 from docx.api import Document  # noqa
+from docx.api import Workbook
 
 __version__ = '0.8.10'
 
@@ -17,6 +18,7 @@ from docx.parts.image import ImagePart
 from docx.parts.numbering import NumberingPart
 from docx.parts.settings import SettingsPart
 from docx.parts.styles import StylesPart
+from docx.xl.workbook import xlWorkbook
 
 
 def part_class_selector(content_type, reltype):
@@ -33,6 +35,7 @@ PartFactory.part_type_for[CT.WML_HEADER] = HeaderPart
 PartFactory.part_type_for[CT.WML_NUMBERING] = NumberingPart
 PartFactory.part_type_for[CT.WML_SETTINGS] = SettingsPart
 PartFactory.part_type_for[CT.WML_STYLES] = StylesPart
+PartFactory.part_type_for[CT.SML_SHEET_MAIN] = xlWorkbook
 
 del (
     CT,
@@ -44,5 +47,6 @@ del (
     PartFactory,
     SettingsPart,
     StylesPart,
+    xlWorkbook,
     part_class_selector,
 )

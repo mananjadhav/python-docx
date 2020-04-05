@@ -86,6 +86,23 @@ register_element_cls('w:numPr',         CT_NumPr)
 register_element_cls('w:numbering',     CT_Numbering)
 register_element_cls('w:startOverride', CT_DecimalNumber)
 
+from .xl import ( 
+        CT_Workbook,
+        CT_Sheets,
+        CT_WorkbookPr,
+        CT_WorkbookProtection,
+        CT_BookViews,
+        CT_DefinedNames,
+        CT_Sheet
+)
+register_element_cls('x:workbook',    CT_Workbook)
+register_element_cls('x:sheets',        CT_Sheets)
+register_element_cls('x:workbookPr',    CT_WorkbookPr)
+register_element_cls('x:workbookProtection',    CT_WorkbookProtection)
+register_element_cls('x:bookViews',     CT_BookViews)
+register_element_cls('x:definedNames',  CT_DefinedNames)
+register_element_cls('x:sheet',         CT_Sheet)
+
 from .section import (  # noqa
     CT_HdrFtr,
     CT_HdrFtrRef,
