@@ -93,7 +93,45 @@ from .xl import (
         CT_WorkbookProtection,
         CT_BookViews,
         CT_DefinedNames,
-        CT_Sheet
+        CT_Sheet,
+        CT_Worksheet,
+        CT_SheetPr,
+        CT_SheetDimension,
+        CT_SheetViews,
+        CT_SheetFormatPr,
+        CT_Cols,
+        CT_SheetData,
+        CT_SheetCalcPr,
+        CT_SheetProtection,
+        CT_ProtectedRanges,
+        CT_Scenarios,
+        CT_AutoFilter,
+        CT_SortState,
+        CT_DataConsolidate,
+        CT_CustomSheetViews,
+        CT_MergeCells,
+        CT_PhoneticPr,
+        CT_ConditionalFormatting,
+        CT_DataValidations,
+        CT_Hyperlinks,
+        CT_PrintOptions,
+        CT_PageMargins,
+        CT_PageSetup,
+        CT_HeaderFooter,
+        CT_PageBreak,
+        CT_CustomProperties,
+        CT_CellWatches,
+        CT_IgnoredErrors,
+        CT_SmartTags,
+        CT_Drawing,
+        CT_LegacyDrawing,
+        CT_DrawingHF,
+        CT_SheetBackgroundPicture,
+        CT_OleObjects,
+        CT_Controls,
+        CT_WebPublishItems,
+        CT_TableParts,
+        CT_ExtensionList,
 )
 register_element_cls('x:workbook',    CT_Workbook)
 register_element_cls('x:sheets',        CT_Sheets)
@@ -102,6 +140,48 @@ register_element_cls('x:workbookProtection',    CT_WorkbookProtection)
 register_element_cls('x:bookViews',     CT_BookViews)
 register_element_cls('x:definedNames',  CT_DefinedNames)
 register_element_cls('x:sheet',         CT_Sheet)
+register_element_cls('x:worksheet',     CT_Worksheet)
+register_element_cls('x:sheetPr',         CT_SheetPr)
+register_element_cls('x:dimension',           CT_SheetDimension)
+register_element_cls('x:sheetViews',          CT_SheetViews)
+register_element_cls('x:sheetFormatPr',           CT_SheetFormatPr)
+register_element_cls('x:cols',            CT_Cols)
+register_element_cls('x:sheetData',           CT_SheetData)
+register_element_cls('x:sheetCalcPr',         CT_SheetCalcPr)
+register_element_cls('x:sheetProtection',         CT_SheetProtection)
+register_element_cls('x:protectedRanges',         CT_ProtectedRanges)
+register_element_cls('x:scenarios',           CT_Scenarios)
+register_element_cls('x:autoFilter',          CT_AutoFilter)
+register_element_cls('x:sortState',           CT_SortState)
+register_element_cls('x:dataConsolidate',         CT_DataConsolidate)
+register_element_cls('x:customSheetViews',            CT_CustomSheetViews)
+register_element_cls('x:mergeCells',          CT_MergeCells)
+register_element_cls('x:phoneticPr',          CT_PhoneticPr)
+register_element_cls('x:conditionalFormatting',           CT_ConditionalFormatting)
+register_element_cls('x:dataValidations',         CT_DataValidations)
+register_element_cls('x:hyperlinks',          CT_Hyperlinks)
+register_element_cls('x:printOptions',            CT_PrintOptions)
+register_element_cls('x:pageMargins',         CT_PageMargins)
+register_element_cls('x:pageSetup',           CT_PageSetup)
+register_element_cls('x:headerFooter',            CT_HeaderFooter)
+register_element_cls('x:rowBreaks',           CT_PageBreak)
+register_element_cls('x:colBreaks',           CT_PageBreak)
+register_element_cls('x:customProperties',            CT_CustomProperties)
+register_element_cls('x:cellWatches',         CT_CellWatches)
+register_element_cls('x:ignoredErrors',           CT_IgnoredErrors)
+register_element_cls('x:smartTags',           CT_SmartTags)
+register_element_cls('x:drawing',         CT_Drawing)
+register_element_cls('x:legacyDrawing',           CT_LegacyDrawing)
+register_element_cls('x:legacyDrawingHF',         CT_LegacyDrawing)
+register_element_cls('x:drawingHF',           CT_DrawingHF)
+register_element_cls('x:picture',         CT_SheetBackgroundPicture)
+register_element_cls('x:oleObjects',          CT_OleObjects)
+register_element_cls('x:controls',            CT_Controls)
+register_element_cls('x:webPublishItems',         CT_WebPublishItems)
+register_element_cls('x:tableParts',      CT_TableParts)
+register_element_cls('x:extLst',          CT_ExtensionList)
+
+
 
 from .section import (  # noqa
     CT_HdrFtr,
