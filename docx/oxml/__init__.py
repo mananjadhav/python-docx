@@ -266,3 +266,6 @@ from .text.run import CT_Br, CT_R, CT_Text  # noqa
 register_element_cls('w:br', CT_Br)
 register_element_cls('w:r',  CT_R)
 register_element_cls('w:t',  CT_Text)
+
+from .text.hyperlink import CT_Hyperlink
+register_element_cls('w:hyperlink',  CT_Hyperlink)
